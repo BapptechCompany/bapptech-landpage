@@ -452,7 +452,7 @@ a {
   }
 
   .desktop-only {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -478,4 +478,7 @@ a {
 .question-form button {
   align-self: start;
   width: fit-content;
+}
+.desktop-only {
+  display: inline-flex;
 }
