@@ -34,6 +34,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XD1W52MM6M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-XD1W52MM6M");
+    </script>
   </head>
   <body>
     <div class="backdrop"></div>
@@ -317,10 +324,10 @@
       <section id="contato" class="section cta">
         <div class="container cta-box reveal">
           <div>
-            <h2>Quer entrar no piloto?</h2>
-            <p>Vagas limitadas para PMEs. Garanta prioridade nas primeiras versões.</p>
+            <h2>Participe do piloto</h2>
+            <p>Receba prioridade nas primeiras versões e ajude a definir o produto.</p>
           </div>
-          <form class="cta-form" action="https://formspree.io/f/xnjvwbzd" method="post" data-success="Cadastro no piloto enviado. Obrigado!">
+          <form class="cta-form cta-form-stacked" action="https://formspree.io/f/xnjvwbzd" method="post" data-success="Cadastro no piloto enviado. Obrigado!">
             <input type="hidden" name="_subject" value="Bapptech Piloto — Novo interessado" />
             <input type="hidden" name="origem" value="Landing - Piloto" />
             <div class="honeypot" aria-hidden="true">
@@ -344,8 +351,6 @@
             <button class="btn" type="submit">Quero ser piloto</button>
             <p class="form-status" aria-live="polite"></p>
           </form>
-          <div class="cta-actions">
-          </div>
         </div>
       </section>
     </main>

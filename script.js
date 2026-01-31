@@ -39,6 +39,17 @@ document.addEventListener("click", (event) => {
   }
 });
 
+document.addEventListener("contextmenu", (event) => {
+  event.preventDefault();
+});
+
+document.addEventListener("keydown", (event) => {
+  const key = event.key.toLowerCase();
+  if ((event.ctrlKey || event.metaKey) && ["c", "s", "u", "p"].includes(key)) {
+    event.preventDefault();
+  }
+});
+
 const bindFormspree = (form) => {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
