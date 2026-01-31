@@ -77,6 +77,41 @@ a {
   border-bottom: 1px solid var(--stroke);
 }
 
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  padding: 8px;
+  gap: 6px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 999px;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 0 22px;
+  background: rgba(5, 8, 12, 0.9);
+  border-top: 1px solid var(--stroke);
+}
+
+.mobile-menu a {
+  color: var(--muted);
+  padding: 6px 0;
+}
+
+.mobile-menu a:hover {
+  color: var(--ink);
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -672,6 +707,11 @@ a {
     display: none;
   }
 
+  .menu-toggle {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
   .hero {
     padding-top: 60px;
   }
@@ -739,6 +779,10 @@ a {
   .cta-form button {
     width: fit-content;
   }
+}
+
+.mobile-menu.open {
+  display: flex;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -89,3 +89,21 @@ const bindFormspree = (form) => {
 };
 
 document.querySelectorAll("form[action*='formspree.io']").forEach(bindFormspree);
+
+const toggleMenu = () => {
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".mobile-menu");
+  if (!toggle || !menu) return;
+  toggle.addEventListener("click", () => {
+    const open = menu.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+};
+
+toggleMenu();
