@@ -153,11 +153,14 @@ a {
   padding: var(--space-3);
   box-shadow: var(--shadow);
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-card img {
   display: block;
   width: 100%;
+  max-width: 520px;
   height: auto;
   object-fit: contain;
   border-radius: 16px;
@@ -295,13 +298,14 @@ a {
 
 .feature-media {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  max-height: 220px;
   border-radius: 16px;
-  object-fit: cover;
+  object-fit: contain;
   border: 1px solid var(--stroke);
   box-shadow: var(--shadow);
   margin-bottom: var(--space-2);
-  background: #fff5ea;
+  background: #ffffff;
+  padding: 12px;
 }
 
 .image-note {
