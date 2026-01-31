@@ -450,6 +450,10 @@ a {
     display: inline-flex;
     flex-direction: column;
   }
+
+  .desktop-only {
+    display: none;
+  }
 }
 
 @media (max-width: 520px) {
