@@ -415,9 +415,11 @@ a {
   border-radius: 24px;
   padding: var(--space-4);
   min-height: 280px;
+  overflow: hidden;
 }
 
 .dashboard-shot {
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;

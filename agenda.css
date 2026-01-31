@@ -152,9 +152,11 @@ a {
   border-radius: var(--radius);
   padding: var(--space-3);
   box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
 .hero-card img {
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
