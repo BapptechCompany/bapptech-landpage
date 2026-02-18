@@ -1,0 +1,114 @@
+{
+  "site": {
+    "name": "Bapptech",
+    "message": "Modernizamos sistemas corporativos com previsibilidade e governança.",
+    "primaryCta": "Solicitar Diagnóstico Arquitetural",
+    "ctaBarText": "Quer modernizar com segurança e previsibilidade?"
+  },
+  "nav": {
+    "items": [
+      { "key": "home", "label": "Home", "href": "" },
+      { "key": "servicos", "label": "Serviços", "href": "servicos/" },
+      { "key": "metodologia", "label": "Metodologia", "href": "metodologia/" },
+      { "key": "governanca", "label": "Governança", "href": "governanca-seguranca/" },
+      { "key": "cases", "label": "Cases", "href": "cases/" },
+      { "key": "sobre", "label": "Sobre", "href": "sobre/" },
+      { "key": "contato", "label": "Contato", "href": "contato/" }
+    ]
+  },
+  "footer": {
+    "email": "contato@bapptech.com.br",
+    "whatsapp": "https://wa.me/5511922737502?text=Oi%21%20Quero%20solicitar%20um%20diagnostico%20arquitetural%20com%20a%20Bapptech.",
+    "city": "São Paulo/SP",
+    "cnpj": "",
+    "copyright": "Todos os direitos reservados."
+  },
+  "home": {
+    "hero": {
+      "h1": "Modernizamos sistemas corporativos com previsibilidade e governança.",
+      "subheadline": "Conduzimos evolução arquitetural, integração entre sistemas e migração para cloud com escopo claro, entregas faseadas e controle de risco.",
+      "trustBullets": [
+        "Escopo e critérios de aceite definidos",
+        "Entregas com marcos e validação",
+        "Documentação e governança de mudanças"
+      ]
+    },
+    "problemas": {
+      "title": "Quando a operação depende de um sistema que não evolui, o risco cresce.",
+      "items": [
+        "Sistemas monolíticos difíceis de manter",
+        "Integrações frágeis e dependência de processos manuais",
+        "Falta de APIs e camadas de integração consistentes",
+        "Infraestrutura obsoleta ou cloud sem governança",
+        "Projetos que atrasam por falta de escopo e validação"
+      ],
+      "closing": "Não é sobre reescrever tudo. É sobre evoluir com controle."
+    },
+    "servicos": [
+      {
+        "title": "Modernização de Aplicações Corporativas",
+        "text": "Reorganizamos a base do sistema para reduzir dívida técnica, aumentar estabilidade e permitir evolução contínua.",
+        "anchor": "modernizacao-aplicacoes"
+      },
+      {
+        "title": "Integração Corporativa e Camada de APIs",
+        "text": "Estruturamos uma camada de integração para conectar sistemas antigos e plataformas modernas com segurança e rastreabilidade.",
+        "anchor": "integracao-apis"
+      },
+      {
+        "title": "Transformação para Cloud e Infraestrutura Moderna",
+        "text": "Planejamos e executamos migração controlada para cloud com ambientes organizados e governança operacional.",
+        "anchor": "cloud"
+      },
+      {
+        "title": "Integração do Legado com Plataformas Estratégicas",
+        "text": "Conectamos seu sistema atual a ERP/CRM e outras plataformas, preservando continuidade operacional.",
+        "anchor": "integracao-plataformas"
+      }
+    ]
+  },
+  "servicos": {
+    "hero": {
+      "h1": "Serviços de modernização e integração para sistemas corporativos",
+      "sub": "Projetos estruturados, faseados e com governança."
+    }
+  },
+  "metodologia": {
+    "hero": {
+      "h1": "Metodologia de projeto: previsibilidade do início ao pós-entrega",
+      "sub": "Um processo estruturado para reduzir risco e acelerar evolução."
+    }
+  },
+  "governanca": {
+    "hero": {
+      "h1": "Governança e segurança para reduzir risco em mudanças críticas",
+      "sub": "Controles e práticas para execução responsável."
+    }
+  },
+  "cases": {
+    "hero": {
+      "h1": "Cases e cenários típicos de modernização",
+      "sub": "Exemplos de como conduzimos evolução com previsibilidade."
+    }
+  },
+  "sobre": {
+    "hero": {
+      "h1": "Uma consultoria técnica com execução responsável",
+      "sub": "Estrutura enxuta, processo claro e especialistas sob demanda."
+    }
+  },
+  "contato": {
+    "hero": {
+      "h1": "Solicitar Diagnóstico",
+      "sub": "Conte seu cenário. Retorno em até 48h úteis."
+    }
+  },
+  "microcopy": {
+    "return": "Retorno em até 48h úteis",
+    "transparency": [
+      "escopo claro",
+      "entregas faseadas",
+      "critérios de aceite"
+    ]
+  }
+}

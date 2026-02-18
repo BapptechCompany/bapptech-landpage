@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contato | Solicitar Diagnóstico | Bapptech</title>
+    <meta name="description" content="Solicite um diagnóstico arquitetural com a Bapptech. Retorno em até 48h úteis." />
+    <link rel="canonical" href="https://bapptech.com.br/contato/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Solicitar Diagnóstico | Bapptech" />
+    <meta property="og:description" content="Conte seu cenário e receba próximos passos para modernizar com previsibilidade e governança." />
+    <meta property="og:url" content="https://bapptech.com.br/contato/" />
+    <meta property="og:image" content="https://bapptech.com.br/assets/hero-modernization.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0f0b09" />
+    <link rel="icon" href="../assets/bapptech-favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body data-page="contato" data-root="/">
+    <div data-component="header"></div>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Contato</span>
+            <h1>Solicitar Diagnóstico</h1>
+            <p class="lead">Conte seu cenário. Retorno em até 48h úteis.</p>
+          </div>
+
+          <form class="card form-grid reveal" data-contact-form action="https://formspree.io/f/xnjvwbzd" method="post">
+            <input type="hidden" name="_subject" value="Bapptech — Solicitação de Diagnóstico Arquitetural" />
+            <input type="hidden" name="origem" value="Site Institucional - Contato" />
+            <div class="form-field">
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" type="text" required />
+            </div>
+            <div class="form-field">
+              <label for="empresa">Empresa</label>
+              <input id="empresa" name="empresa" type="text" required />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+            <div class="form-field">
+              <label for="telefone">Telefone/WhatsApp</label>
+              <input id="telefone" name="telefone" type="tel" required />
+            </div>
+            <div class="form-field">
+              <label for="segmento">Segmento</label>
+              <select id="segmento" name="segmento" required>
+                <option value="">Selecione</option>
+                <option>Indústria</option>
+                <option>Serviços</option>
+                <option>Varejo</option>
+                <option>Financeiro</option>
+                <option>Saúde</option>
+                <option>Logística</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="situacao">Situação atual</label>
+              <select id="situacao" name="situacao" required>
+                <option value="">Selecione</option>
+                <option>On-premise</option>
+                <option>Cloud</option>
+                <option>Híbrido</option>
+              </select>
+            </div>
+            <div class="form-field" style="grid-column: 1 / -1;">
+              <label for="necessidade">Tipo de necessidade (multi-select)</label>
+              <select id="necessidade" name="necessidade" multiple required>
+                <option>Modernização</option>
+                <option>Integração</option>
+                <option>Cloud</option>
+                <option>ERP/CRM</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            <div class="form-field" style="grid-column: 1 / -1;">
+              <label for="cenario">Descrição do cenário</label>
+              <textarea id="cenario" name="cenario" required></textarea>
+            </div>
+            <div class="form-field">
+              <label for="prazo">Prazo desejado</label>
+              <select id="prazo" name="prazo" required>
+                <option value="">Selecione</option>
+                <option>Imediato (até 30 dias)</option>
+                <option>Curto prazo (1 a 3 meses)</option>
+                <option>Médio prazo (3 a 6 meses)</option>
+                <option>Em planejamento</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="investimento">Faixa de investimento (opcional)</label>
+              <select id="investimento" name="investimento">
+                <option value="">Prefiro não informar</option>
+                <option>Até R$ 100 mil</option>
+                <option>R$ 100 mil a R$ 300 mil</option>
+                <option>R$ 300 mil a R$ 700 mil</option>
+                <option>Acima de R$ 700 mil</option>
+              </select>
+            </div>
+
+            <label class="checkbox-row" for="lgpd">
+              <input id="lgpd" name="lgpd" type="checkbox" required />
+              <span>Li e concordo com o tratamento dos dados para contato, conforme a Política de Privacidade.</span>
+            </label>
+
+            <div class="form-actions">
+              <button class="btn" type="submit" aria-label="Enviar solicitação de diagnóstico">Solicitar Diagnóstico Arquitetural</button>
+              <span class="form-status" aria-live="polite"></span>
+            </div>
+          </form>
+
+          <div class="success-box reveal" data-form-success>
+            <h2>Recebido. Retornaremos em até 48h úteis.</h2>
+            <p>Obrigado por compartilhar o contexto. Vamos responder com próximos passos objetivos.</p>
+            <div class="hero-actions">
+              <a class="btn btn-outline" href="/metodologia/" aria-label="Ver metodologia">Ver metodologia</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-component="footer"></div>
+    <div data-component="cta-bar"></div>
+    <script src="../js/site.js" defer></script>
+  </body>
+</html>

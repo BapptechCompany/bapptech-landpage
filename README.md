@@ -1,15 +1,22 @@
 # bapptech-landpage
-Landing page estática da Bapptech.
 
-## Como usar
-- Abra `index.html` no navegador, ou hospede em qualquer serviço estático.
-
-## Ajustes necessários
-- Trocar o WhatsApp em `index.html` (buscar por `55SEUNUMERO`).
-- Ajustar textos ou benefícios conforme necessidade.
+Site institucional multi-página da Bapptech com foco em prestação de serviços B2B.
 
 ## Estrutura
-- `index.html`
-- `styles.css`
-- `script.js`
-- `assets/` (logos)
+- `/` Home
+- `/servicos/`
+- `/metodologia/`
+- `/governanca-seguranca/`
+- `/cases/`
+- `/sobre/`
+- `/contato/`
+- `/privacidade/`
+
+## Arquivos principais
+- `styles.css` (design system e componentes globais)
+- `js/site.js` (header/footer, menu mobile, animações, CTA bar, formulário)
+- `content.json` (copy centralizada)
+- `assets/` (imagens e identidade)
+
+## Execução
+Recomendado servir como site estático (ex.: `npx serve .`) para garantir carregamento de `content.json`.
