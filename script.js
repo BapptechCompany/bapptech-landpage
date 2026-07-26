@@ -1,109 +1,117 @@
-const revealItems = document.querySelectorAll(".reveal");
+(() => {
+  'use strict';
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("reveal-visible");
+  const header = document.querySelector('.site-header');
+  const menuButton = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.main-nav');
+  const navLinks = [...document.querySelectorAll('.main-nav a[href^="#"]')];
+  const sections = [...document.querySelectorAll('main section[id]')];
+  const revealElements = [...document.querySelectorAll('.reveal')];
+  const year = document.getElementById('current-year');
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+
+  const setHeaderState = () => {
+    header?.classList.toggle('scrolled', window.scrollY > 24);
+  };
+
+  const closeMenu = () => {
+    if (!menuButton || !menu) return;
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', 'Abrir menu');
+    menu.classList.remove('open');
+  };
+
+  menuButton?.addEventListener('click', () => {
+    const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-expanded', String(!isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
+    menu?.classList.toggle('open', !isOpen);
+  });
+
+  navLinks.forEach(link => link.addEventListener('click', closeMenu));
+  window.addEventListener('scroll', setHeaderState, { passive: true });
+  setHeaderState();
+
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
         observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.15 }
-);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px' });
 
-revealItems.forEach((item) => observer.observe(item));
+    revealElements.forEach(element => revealObserver.observe(element));
 
-const ensureLightbox = () => {
-  if (document.querySelector(".lightbox-overlay")) return;
-  const overlay = document.createElement("div");
-  overlay.className = "lightbox-overlay";
-  overlay.innerHTML = '<img class="lightbox-image" alt="Imagem ampliada" />';
-  overlay.addEventListener("click", () => overlay.classList.remove("active"));
-  document.body.appendChild(overlay);
-};
+    const navObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+        });
+      });
+    }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
 
-const openLightbox = (src, alt) => {
-  ensureLightbox();
-  const overlay = document.querySelector(".lightbox-overlay");
-  const img = overlay.querySelector(".lightbox-image");
-  img.src = src;
-  img.alt = alt || "Imagem ampliada";
-  overlay.classList.add("active");
-};
-
-document.addEventListener("click", (event) => {
-  const target = event.target;
-  if (target && target.classList && target.classList.contains("lightbox")) {
-    openLightbox(target.src, target.alt);
+    sections.forEach(section => navObserver.observe(section));
+  } else {
+    revealElements.forEach(element => element.classList.add('visible'));
   }
-});
 
-document.addEventListener("contextmenu", (event) => {
-  event.preventDefault();
-});
+  if (year) year.textContent = String(new Date().getFullYear());
 
-document.addEventListener("keydown", (event) => {
-  const key = event.key.toLowerCase();
-  if ((event.ctrlKey || event.metaKey) && ["c", "s", "u", "p"].includes(key)) {
+  const markInvalid = (field, invalid) => {
+    field.classList.toggle('invalid', invalid);
+    field.setAttribute('aria-invalid', String(invalid));
+  };
+
+  form?.addEventListener('submit', event => {
     event.preventDefault();
-  }
-});
-
-const bindFormspree = (form) => {
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    const status = form.querySelector(".form-status");
-    if (status) status.textContent = "Enviando...";
+    status.textContent = '';
+    status.style.color = '';
 
     const data = new FormData(form);
-    const trap = data.get("_gotcha");
-    if (trap) {
-      if (status) status.textContent = "Envio bloqueado.";
+    const name = String(data.get('name') || '').trim();
+    const company = String(data.get('company') || '').trim();
+    const need = String(data.get('need') || '').trim();
+    const message = String(data.get('message') || '').trim();
+
+    const requiredFields = [
+      [form.elements.name, !name],
+      [form.elements.need, !need],
+      [form.elements.message, !message]
+    ];
+
+    requiredFields.forEach(([field, invalid]) => markInvalid(field, invalid));
+    const invalid = requiredFields.some(([, value]) => value);
+
+    if (invalid) {
+      status.textContent = 'Preencha nome, tipo de projeto e contexto inicial.';
+      const firstInvalid = requiredFields.find(([, value]) => value)?.[0];
+      firstInvalid?.focus();
       return;
     }
-    const now = Date.now();
-    const last = Number(localStorage.getItem("bapptech_last_submit") || 0);
-    if (now - last < 60000) {
-      if (status) status.textContent = "Aguarde um minuto para enviar novamente.";
-      return;
-    }
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: data,
-        headers: { Accept: "application/json" },
-      });
 
-      if (response.ok) {
-        if (status) status.textContent = form.dataset.success || "E-mail enviado. Obrigado!";
-        form.reset();
-        localStorage.setItem("bapptech_last_submit", String(Date.now()));
-      } else {
-        if (status) status.textContent = "Erro ao enviar. Tente novamente.";
-      }
-    } catch (err) {
-      if (status) status.textContent = "Erro de conexão. Tente novamente.";
-    }
+    const text = [
+      'Olá! Quero conversar com a Bapptech sobre um projeto.',
+      '',
+      `Nome: ${name}`,
+      company ? `Empresa: ${company}` : '',
+      `Tipo de projeto: ${need}`,
+      `Contexto: ${message}`
+    ].filter(Boolean).join('\n');
+
+    const url = `https://wa.me/5511922737502?text=${encodeURIComponent(text)}`;
+    status.style.color = '#227a31';
+    status.textContent = 'Abrindo o WhatsApp com a mensagem preenchida...';
+    window.open(url, '_blank', 'noopener,noreferrer');
   });
-};
 
-document.querySelectorAll("form[action*='formspree.io']").forEach(bindFormspree);
-
-const toggleMenu = () => {
-  const toggle = document.querySelector(".menu-toggle");
-  const menu = document.querySelector(".mobile-menu");
-  if (!toggle || !menu) return;
-  toggle.addEventListener("click", () => {
-    const open = menu.classList.toggle("open");
-    toggle.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  menu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      menu.classList.remove("open");
-      toggle.setAttribute("aria-expanded", "false");
+  form?.querySelectorAll('input, select, textarea').forEach(field => {
+    field.addEventListener('input', () => {
+      markInvalid(field, false);
+      status.textContent = '';
+      status.style.color = '';
     });
   });
-};
-
-toggleMenu();
+})();

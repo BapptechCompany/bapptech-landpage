@@ -1,222 +1,476 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bapptech | Modernização de Sistemas Corporativos</title>
-    <meta
-      name="description"
-      content="Modernizamos sistemas corporativos com previsibilidade e governança: evolução arquitetural, integração entre sistemas e migração cloud com controle de risco."
-    />
-    <link rel="canonical" href="https://bapptech.com.br/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Bapptech | Modernização de Sistemas Corporativos" />
-    <meta
-      property="og:description"
-      content="Conduzimos evolução arquitetural, integração entre sistemas e migração cloud com escopo claro, entregas faseadas e controle de risco."
-    />
-    <meta property="og:url" content="https://bapptech.com.br/" />
-    <meta property="og:image" content="https://bapptech.com.br/assets/hero-modernization.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="theme-color" content="#0f0b09" />
-    <link rel="icon" href="assets/bapptech-favicon.ico" />
-    <link rel="apple-touch-icon" href="assets/bapptech-icon-180.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body data-page="home" data-root="/">
-    <div data-component="header"></div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <main>
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="reveal">
-            <span class="eyebrow">Bapptech • Prestação de Serviços</span>
-            <h1>Modernizamos sistemas corporativos com previsibilidade e governança.</h1>
-            <p class="lead">
-              Conduzimos evolução arquitetural, integração entre sistemas e migração para cloud com escopo claro, entregas faseadas e controle de risco.
-            </p>
-            <div class="hero-actions">
-              <a class="btn" href="/contato/" aria-label="Solicitar Diagnóstico Arquitetural">Solicitar Diagnóstico Arquitetural</a>
-              <a class="btn btn-outline" href="/metodologia/" aria-label="Ver metodologia">Ver Metodologia</a>
-            </div>
-            <ul class="trust-bullets">
-              <li>Escopo e critérios de aceite definidos</li>
-              <li>Entregas com marcos e validação</li>
-              <li>Documentação e governança de mudanças</li>
-            </ul>
-          </div>
-          <div class="hero-media reveal">
-            <img src="assets/hero-modernization.png" alt="Visual abstrato representando modernização corporativa" width="1536" height="1024" />
-          </div>
-        </div>
-      </section>
+  <title>Empresa de Desenvolvimento de Software Sob Medida | Bapptech</title>
+  <meta name="description" content="A Bapptech desenvolve software sob medida, moderniza sistemas, integra APIs e estrutura arquitetura cloud com escopo claro, testes e documentação.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#0F1115">
+  <meta name="application-name" content="Bapptech">
+  <meta name="author" content="Bapptech">
+  <meta name="geo.region" content="BR-SP">
+  <meta name="geo.placename" content="São Paulo">
+  <link rel="canonical" href="https://bapptech.com.br/">
 
-      <section class="section section-alt">
-        <div class="container">
-          <div class="section-head reveal">
-            <h2>Quando a operação depende de um sistema que não evolui, o risco cresce.</h2>
-          </div>
-          <div class="grid-3 reveal">
-            <article class="card"><p>Sistemas monolíticos difíceis de manter</p></article>
-            <article class="card"><p>Integrações frágeis e dependência de processos manuais</p></article>
-            <article class="card"><p>Falta de APIs e camadas de integração consistentes</p></article>
-            <article class="card"><p>Infraestrutura obsoleta ou cloud sem governança</p></article>
-            <article class="card"><p>Projetos que atrasam por falta de escopo e validação</p></article>
-          </div>
-          <p class="kicker reveal">Não é sobre reescrever tudo. É sobre evoluir com controle.</p>
-        </div>
-      </section>
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bapptech">
+  <meta property="og:title" content="Bapptech | Desenvolvimento de Software Sob Medida">
+  <meta property="og:description" content="Projetos de software com escopo claro, entregas por marcos, testes, documentação e governança técnica.">
+  <meta property="og:url" content="https://bapptech.com.br/">
+  <meta property="og:image" content="https://bapptech.com.br/assets/og-bapptech.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Bapptech — Tecnologia que transforma">
 
-      <section class="section" id="servicos-home">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="tag">Serviços</span>
-            <h2>4 pilares de atuação</h2>
-          </div>
-          <div class="grid-4 reveal">
-            <article class="card pillar-card">
-              <h3>Modernização de Aplicações Corporativas</h3>
-              <p>Reorganizamos a base do sistema para reduzir dívida técnica, aumentar estabilidade e permitir evolução contínua.</p>
-              <a href="/servicos/#modernizacao-aplicacoes" aria-label="Entender como funciona a modernização de aplicações">Entender como funciona</a>
-            </article>
-            <article class="card pillar-card">
-              <h3>Integração Corporativa e Camada de APIs</h3>
-              <p>Estruturamos uma camada de integração para conectar sistemas antigos e plataformas modernas com segurança e rastreabilidade.</p>
-              <a href="/servicos/#integracao-apis" aria-label="Entender como funciona integração e APIs">Entender como funciona</a>
-            </article>
-            <article class="card pillar-card">
-              <h3>Transformação para Cloud e Infraestrutura Moderna</h3>
-              <p>Planejamos e executamos migração controlada para cloud com ambientes organizados e governança operacional.</p>
-              <a href="/servicos/#cloud" aria-label="Entender como funciona transformação para cloud">Entender como funciona</a>
-            </article>
-            <article class="card pillar-card">
-              <h3>Integração do Legado com Plataformas Estratégicas</h3>
-              <p>Conectamos seu sistema atual a ERP/CRM e outras plataformas, preservando continuidade operacional.</p>
-              <a href="/servicos/#integracao-plataformas" aria-label="Entender como funciona integração do legado">Entender como funciona</a>
-            </article>
-          </div>
-        </div>
-      </section>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bapptech | Desenvolvimento de Software Sob Medida">
+  <meta name="twitter:description" content="Desenvolvimento, modernização, integrações, arquitetura, testes e documentação para projetos corporativos.">
+  <meta name="twitter:image" content="https://bapptech.com.br/assets/og-bapptech.png">
+  <meta name="twitter:image:alt" content="Bapptech — Tecnologia que transforma">
 
-      <section class="section section-alt">
-        <div class="container">
-          <div class="section-head reveal">
-            <h2>Independentemente do estágio atual, o objetivo é o mesmo: previsibilidade.</h2>
-          </div>
-          <div class="split-banner reveal">
-            <article class="card">
-              <h3>Ainda on-premise</h3>
-              <ul class="feature-list">
-                <li>Migração gradual</li>
-                <li>Redução de risco</li>
-                <li>Continuidade operacional</li>
-              </ul>
-            </article>
-            <article class="card">
-              <h3>Já na cloud</h3>
-              <ul class="feature-list">
-                <li>Organização de arquitetura</li>
-                <li>Governança e estabilidade</li>
-                <li>Evolução com controle</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
+  <link rel="icon" href="./favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="preload" href="./assets/logo-bapptech.webp" as="image" type="image/webp">
+  <link rel="preload" href="./assets/hero-bapptech-background.webp" as="image" type="image/webp" fetchpriority="high">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="./styles.css">
 
-      <section class="section">
-        <div class="container">
-          <div class="section-head reveal">
-            <h2>Um processo estruturado para reduzir risco e evitar surpresas.</h2>
-          </div>
-          <div class="timeline reveal">
-            <div class="timeline-item"><span class="step-dot">1</span><div class="timeline-card"><h3>Alinhamento inicial</h3><p>Contexto e objetivos compartilhados.</p></div></div>
-            <div class="timeline-item"><span class="step-dot">2</span><div class="timeline-card"><h3>Assessment técnico e mapeamento de risco</h3><p>Visão objetiva do cenário atual.</p></div></div>
-            <div class="timeline-item"><span class="step-dot">3</span><div class="timeline-card"><h3>Escopo formal e plano faseado</h3><p>Entregas organizadas por marcos.</p></div></div>
-            <div class="timeline-item"><span class="step-dot">4</span><div class="timeline-card"><h3>Execução com marcos e validação</h3><p>Acompanhamento periódico e decisão baseada em evidência.</p></div></div>
-            <div class="timeline-item"><span class="step-dot">5</span><div class="timeline-card"><h3>Homologação e transição</h3><p>Aceite formal e passagem estruturada.</p></div></div>
-            <div class="timeline-item"><span class="step-dot">6</span><div class="timeline-card"><h3>Sustentação opcional e evolução</h3><p>Continuidade conforme prioridade do negócio.</p></div></div>
-          </div>
-          <div class="hero-actions reveal">
-            <a class="btn btn-outline" href="/metodologia/" aria-label="Ver metodologia completa">Ver Metodologia</a>
-          </div>
-        </div>
-      </section>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://bapptech.com.br/#organization",
+        "name": "Bapptech",
+        "url": "https://bapptech.com.br/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://bapptech.com.br/assets/og-bapptech.png",
+          "width": 1200,
+          "height": 630
+        },
+        "image": "https://bapptech.com.br/assets/og-bapptech.png",
+        "slogan": "Tecnologia que transforma",
+        "email": "contato@bapptech.com.br",
+        "telephone": "+55 11 92273-7502",
+        "description": "Empresa de desenvolvimento de software sob medida, modernização de sistemas, integrações e arquitetura de soluções.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "São Paulo",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Brasil"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "telephone": "+55 11 92273-7502",
+          "email": "contato@bapptech.com.br",
+          "availableLanguage": "Portuguese"
+        },
+        "knowsAbout": [
+          "desenvolvimento de software sob medida",
+          "modernização de sistemas",
+          "integrações e APIs",
+          "arquitetura cloud",
+          "testes de software",
+          "documentação técnica"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://bapptech.com.br/#website",
+        "url": "https://bapptech.com.br/",
+        "name": "Bapptech",
+        "publisher": {
+          "@id": "https://bapptech.com.br/#organization"
+        },
+        "inLanguage": "pt-BR"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://bapptech.com.br/#webpage",
+        "url": "https://bapptech.com.br/",
+        "name": "Empresa de Desenvolvimento de Software Sob Medida | Bapptech",
+        "description": "A Bapptech desenvolve software sob medida, moderniza sistemas, integra APIs e estrutura arquitetura cloud com escopo claro, testes e documentação.",
+        "isPartOf": {
+          "@id": "https://bapptech.com.br/#website"
+        },
+        "about": {
+          "@id": "https://bapptech.com.br/#organization"
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://bapptech.com.br/assets/og-bapptech.png",
+          "width": 1200,
+          "height": 630
+        },
+        "inLanguage": "pt-BR"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://bapptech.com.br/#software-sob-medida",
+        "serviceType": "Desenvolvimento de software sob medida",
+        "provider": {
+          "@id": "https://bapptech.com.br/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Brasil"
+        },
+        "description": "Desenvolvimento, modernização, integrações, arquitetura, testes e documentação para projetos corporativos."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://bapptech.com.br/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "A Bapptech desenvolve sistemas do zero?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. O trabalho pode começar pela definição do escopo e seguir até a entrega do código, testes e documentação. O formato é ajustado à necessidade do projeto."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Vocês trabalham com sistemas já existentes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. A atuação também contempla modernização, integração entre sistemas, criação de APIs e evolução arquitetural de aplicações existentes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como é calculado o orçamento de desenvolvimento?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O orçamento considera esforço, complexidade, integrações, regras de negócio, segurança, prazo, documentação, testes, suporte e risco de mudanças."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O projeto inclui testes e documentação?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Esses artefatos podem fazer parte da proposta e são definidos de acordo com o escopo. A Bapptech prioriza entregas que possam ser validadas e mantidas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quanto tempo leva para desenvolver um sistema?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Depende do tamanho e da clareza do escopo. Projetos podem ser organizados em fases e marcos para permitir entregas menores, validação progressiva e redução de risco."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
-      <section class="section section-alt">
-        <div class="container">
-          <div class="section-head reveal">
-            <h2>Governança que facilita auditoria e tomada de decisão.</h2>
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a class="brand" href="#topo" aria-label="Bapptech — início">
+        <img src="./assets/logo-bapptech.webp" width="671" height="203" decoding="async" fetchpriority="high" alt="Bapptech — Tecnologia que transforma">
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="menu-principal" aria-label="Navegação principal">
+        <a href="#solucoes">Soluções</a>
+        <a href="#processo">Como trabalhamos</a>
+        <a href="#entregaveis">Entregáveis</a>
+        <a href="#perguntas">Perguntas</a>
+        <a class="button button-small" href="#contato">Fale com a Bapptech</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero section-dark" aria-labelledby="hero-title">
+      <img class="hero-bg" src="./assets/hero-bapptech-background.webp" width="1672" height="941" decoding="async" fetchpriority="high" alt="" aria-hidden="true">
+      <div class="hero-pattern" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">DESENVOLVIMENTO DE SOFTWARE SOB MEDIDA</p>
+          <h1 id="hero-title">Desenvolvimento de software sob medida com <span>clareza, qualidade e controle.</span></h1>
+          <p class="hero-lead">A Bapptech desenvolve e moderniza sistemas corporativos, integra plataformas e estrutura soluções com escopo claro, entregas por marcos, testes e documentação.</p>
+
+          <div class="hero-actions">
+            <a class="button" href="#contato">Solicitar uma conversa</a>
+            <a class="button button-ghost" href="#solucoes">Conhecer as soluções</a>
           </div>
-          <ul class="inline-bullets grid-2 reveal">
-            <li>Registro e governança de mudanças</li>
-            <li>Separação de ambientes (quando aplicável)</li>
-            <li>Documentação entregue ao cliente</li>
-            <li>Confidencialidade e conformidade</li>
+
+          <ul class="trust-list" aria-label="Diferenciais da entrega">
+            <li>Escopo e critérios de aceite definidos</li>
+            <li>Código, testes e documentação</li>
+            <li>Entrega por marcos e validação</li>
           </ul>
-          <div class="hero-actions reveal">
-            <a class="btn btn-outline" href="/governanca-seguranca/" aria-label="Ver Governança e Segurança">Ver Governança e Segurança</a>
-          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section">
-        <div class="container">
-          <div class="section-head reveal">
-            <h2>Exemplos de resultados típicos em modernização</h2>
-          </div>
-          <div class="grid-3 reveal">
-            <article class="card case-card">
-              <span class="meta">Contexto</span>
-              <h3>Operação com legado crítico</h3>
-              <p><strong>Desafio:</strong> Dependência de rotinas manuais e alto retrabalho.</p>
-              <p><strong>Abordagem:</strong> Evolução faseada com integração entre sistemas-chave.</p>
-              <p><strong>Resultado esperado:</strong> Redução de retrabalho e maior previsibilidade.</p>
-            </article>
-            <article class="card case-card">
-              <span class="meta">Contexto</span>
-              <h3>Empresa em expansão</h3>
-              <p><strong>Desafio:</strong> Crescimento acima da capacidade técnica atual.</p>
-              <p><strong>Abordagem:</strong> Ajustes estruturais e padronização de integrações.</p>
-              <p><strong>Resultado esperado:</strong> Integrações mais estáveis e menor risco operacional.</p>
-            </article>
-            <article class="card case-card">
-              <span class="meta">Contexto</span>
-              <h3>Migração para cloud em andamento</h3>
-              <p><strong>Desafio:</strong> Ambientes sem governança consistente.</p>
-              <p><strong>Abordagem:</strong> Organização da arquitetura e controles de mudança.</p>
-              <p><strong>Resultado esperado:</strong> Maior previsibilidade e decisões técnicas auditáveis.</p>
-            </article>
-          </div>
-          <div class="hero-actions reveal">
-            <a class="btn btn-outline" href="/cases/" aria-label="Ver todos os cases">Ver todos os cases</a>
-          </div>
+    <section class="problem-strip" aria-label="Forma de trabalho">
+      <div class="container problem-grid">
+        <div class="reveal">
+          <span class="mini-label">FOCO NO NEGÓCIO</span>
+          <strong>O projeto começa pelo problema que precisa ser resolvido.</strong>
         </div>
-      </section>
+        <div class="reveal">
+          <span class="mini-label">TRANSPARÊNCIA</span>
+          <strong>Escopo, riscos, responsabilidades e aceite ficam claros.</strong>
+        </div>
+        <div class="reveal">
+          <span class="mini-label">ENTREGA TÉCNICA</span>
+          <strong>Código organizado, testes, documentação e transição.</strong>
+        </div>
+      </div>
+    </section>
 
-      <section class="section section-alt">
-        <div class="container">
-          <div class="cta-box reveal">
-            <h2>Quer modernizar com previsibilidade?</h2>
-            <p>Envie seu contexto e retornamos com próximos passos em até 48h úteis.</p>
-            <div class="hero-actions">
-              <a class="btn" href="/contato/" aria-label="Solicitar Diagnóstico Arquitetural">Solicitar Diagnóstico Arquitetural</a>
-              <a class="btn btn-ghost" href="https://wa.me/5511922737502?text=Oi%21%20Quero%20solicitar%20um%20diagnostico%20arquitetural%20com%20a%20Bapptech." target="_blank" rel="noreferrer noopener" aria-label="Falar com a Bapptech">Falar com a Bapptech</a>
+    <section class="section section-light" id="solucoes" aria-labelledby="solucoes-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">SOLUÇÕES</p>
+            <h2 id="solucoes-title">Tecnologia aplicada a projetos corporativos reais.</h2>
+          </div>
+          <p>Atuação orientada a resultado, com arquitetura adequada ao contexto, integração entre sistemas e documentação para continuidade da operação.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 9 4 12l4 3M16 9l4 3-4 3M14 5l-4 14"/></svg>
             </div>
-            <p>Sem compromisso. Primeiro passo é entender o cenário.</p>
+            <h3>Desenvolvimento de software sob medida</h3>
+            <p>Sistemas web, APIs e componentes criados de acordo com o processo, as regras e os objetivos do projeto.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 12h10M5 8h2a3 3 0 0 1 3 3v2a3 3 0 0 0 3 3h6M19 8h-2a3 3 0 0 0-3 3v2"/></svg>
+            </div>
+            <h3>Integrações e APIs</h3>
+            <p>Conexão entre sistemas internos, plataformas externas e serviços por meio de contratos consistentes e rastreáveis.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 7h16v10H4zM8 3v4M16 3v4M8 17v4M16 17v4"/></svg>
+            </div>
+            <h3>Modernização de sistemas</h3>
+            <p>Evolução arquitetural e redução de dívida técnica sem perder de vista a continuidade da operação.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 5 3.5 8.5 7 10 3.5-1.5 7-5 7-10V6zM9 12l2 2 4-4"/></svg>
+            </div>
+            <h3>Qualidade, segurança e documentação</h3>
+            <p>Testes, tratamento de falhas, práticas de segurança e artefatos técnicos que facilitam manutenção e auditoria.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark process-section" id="processo" aria-labelledby="processo-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">COMO TRABALHAMOS</p>
+            <h2 id="processo-title">Um processo estruturado para reduzir risco e evitar surpresas.</h2>
+          </div>
+          <p>O formato é ajustado ao tamanho do projeto, mantendo decisões, marcos e validações visíveis do início à entrega.</p>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <span class="timeline-number">01</span>
+            <div><h3>Alinhamento inicial</h3><p>Contexto, objetivo, envolvidos, dependências e restrições do projeto.</p></div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-number">02</span>
+            <div><h3>Levantamento e escopo</h3><p>Requisitos, riscos, entregáveis, responsabilidades e critérios de aceite.</p></div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-number">03</span>
+            <div><h3>Desenvolvimento e validação</h3><p>Implementação organizada em marcos, com testes e demonstrações técnicas.</p></div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-number">04</span>
+            <div><h3>Entrega e transição</h3><p>Código, documentação, evidências, orientações de implantação e transferência de conhecimento.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-beige" id="entregaveis" aria-labelledby="entregaveis-title">
+      <div class="container deliverables-grid">
+        <div class="deliverables-copy reveal">
+          <p class="eyebrow">ENTREGÁVEIS</p>
+          <h2 id="entregaveis-title">A entrega não termina quando o código funciona.</h2>
+          <p>Os artefatos são definidos conforme o projeto. O objetivo é permitir validação, implantação e manutenção com menos dependência de conhecimento informal.</p>
+          <a class="text-link" href="#contato">Conversar sobre um projeto <span aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="deliverable-list">
+          <article class="deliverable reveal">
+            <span>01</span><div><h3>Código-fonte versionado</h3><p>Organizado no repositório definido, sem credenciais ou dados sensíveis incorporados.</p></div>
+          </article>
+          <article class="deliverable reveal">
+            <span>02</span><div><h3>Testes e evidências</h3><p>Cobertura dos fluxos relevantes e registro das validações realizadas.</p></div>
+          </article>
+          <article class="deliverable reveal">
+            <span>03</span><div><h3>Documentação técnica</h3><p>README, arquitetura, contratos de API, configurações e decisões importantes, quando aplicável.</p></div>
+          </article>
+          <article class="deliverable reveal">
+            <span>04</span><div><h3>Guia de implantação e operação</h3><p>Pré-requisitos, variáveis, validações, rollback e orientações para diagnóstico inicial.</p></div>
+          </article>
+          <article class="deliverable reveal">
+            <span>05</span><div><h3>Transferência de conhecimento</h3><p>Apresentação da solução, pontos de manutenção e passagem para os responsáveis do cliente.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light search-intent" aria-labelledby="escolha-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">ESCOLHA DE FORNECEDOR</p>
+            <h2 id="escolha-title">O que avaliar ao contratar uma empresa para desenvolver um projeto de software?</h2>
+          </div>
+          <p>Preço e prazo importam, mas a proposta precisa deixar claro o que será entregue, como o projeto será validado e quem assume cada responsabilidade.</p>
+        </div>
+
+        <div class="criteria-grid">
+          <article class="criteria-card reveal"><h3>Escopo verificável</h3><p>Entregáveis e critérios de aceite que possam ser conferidos objetivamente.</p></article>
+          <article class="criteria-card reveal"><h3>Responsabilidades claras</h3><p>Definição do que pertence ao fornecedor, ao cliente e a eventuais terceiros.</p></article>
+          <article class="criteria-card reveal"><h3>Qualidade técnica</h3><p>Testes, revisão, segurança, tratamento de erros e padrões de desenvolvimento.</p></article>
+          <article class="criteria-card reveal"><h3>Continuidade</h3><p>Documentação e transferência de conhecimento para reduzir dependência.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark faq-section" id="perguntas" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <div class="reveal">
+          <p class="eyebrow">PERGUNTAS FREQUENTES</p>
+          <h2 id="faq-title">Dúvidas comuns antes de iniciar um projeto.</h2>
+          <p>As condições finais dependem do escopo, do risco e das responsabilidades definidas na proposta.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="reveal">
+            <summary>A Bapptech desenvolve sistemas do zero?</summary>
+            <p>Sim. O trabalho pode começar pela definição do escopo e seguir até a entrega do código, testes e documentação. O formato é ajustado à necessidade do projeto.</p>
+          </details>
+          <details class="reveal">
+            <summary>Vocês trabalham com sistemas já existentes?</summary>
+            <p>Sim. A atuação também contempla modernização, integração entre sistemas, criação de APIs e evolução arquitetural de aplicações existentes.</p>
+          </details>
+          <details class="reveal">
+            <summary>Como é calculado o orçamento de desenvolvimento?</summary>
+            <p>O orçamento considera esforço, complexidade, integrações, regras de negócio, segurança, prazo, documentação, testes, suporte e risco de mudanças.</p>
+          </details>
+          <details class="reveal">
+            <summary>O projeto inclui testes e documentação?</summary>
+            <p>Esses artefatos podem fazer parte da proposta e são definidos de acordo com o escopo. A Bapptech prioriza entregas que possam ser validadas e mantidas.</p>
+          </details>
+          <details class="reveal">
+            <summary>Quanto tempo leva para desenvolver um sistema?</summary>
+            <p>Depende do tamanho e da clareza do escopo. Projetos podem ser organizados em fases e marcos para permitir entregas menores, validação progressiva e redução de risco.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contato" aria-labelledby="contato-title">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">FALE COM A BAPPTECH</p>
+          <h2 id="contato-title">Conte o que sua empresa precisa desenvolver ou modernizar.</h2>
+          <p>Compartilhe o contexto inicial. A conversa serve para entender o cenário, as responsabilidades e os próximos passos para estruturar uma proposta.</p>
+          <div class="contact-links">
+            <a href="mailto:contato@bapptech.com.br">contato@bapptech.com.br</a>
+            <a href="https://wa.me/5511922737502" target="_blank" rel="noopener">WhatsApp: (11) 92273-7502</a>
+            <span>São Paulo — SP</span>
           </div>
         </div>
-      </section>
-    </main>
 
-    <div data-component="footer"></div>
-    <div data-component="cta-bar"></div>
-    <script src="js/site.js" defer></script>
-  </body>
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="form-row">
+            <label>Nome
+              <input type="text" name="name" autocomplete="name" required maxlength="80">
+            </label>
+            <label>Empresa
+              <input type="text" name="company" autocomplete="organization" maxlength="100">
+            </label>
+          </div>
+          <label>Tipo de projeto
+            <select name="need" required>
+              <option value="">Selecione</option>
+              <option>Desenvolvimento de software sob medida</option>
+              <option>Modernização de sistema existente</option>
+              <option>Integrações e APIs</option>
+              <option>Arquitetura e cloud</option>
+              <option>Outro projeto de tecnologia</option>
+            </select>
+          </label>
+          <label>Contexto inicial
+            <textarea name="message" rows="5" required maxlength="1200" placeholder="Descreva o problema, objetivo, prazo ou sistema envolvido."></textarea>
+          </label>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <button class="button button-full" type="submit">Enviar pelo WhatsApp</button>
+          <p class="form-note">Ao continuar, uma mensagem será montada e aberta no WhatsApp. Os dados não são armazenados por esta página.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="./assets/logo-bapptech.webp" width="671" height="203" loading="lazy" decoding="async" alt="Bapptech — Tecnologia que transforma">
+        <p>Desenvolvimento e modernização de soluções corporativas com escopo, qualidade e documentação.</p>
+      </div>
+      <div>
+        <h2>Navegação</h2>
+        <a href="#solucoes">Soluções</a>
+        <a href="#processo">Como trabalhamos</a>
+        <a href="#entregaveis">Entregáveis</a>
+        <a href="#perguntas">Perguntas</a>
+      </div>
+      <div>
+        <h2>Contato</h2>
+        <a href="mailto:contato@bapptech.com.br">contato@bapptech.com.br</a>
+        <a href="https://wa.me/5511922737502" target="_blank" rel="noopener">WhatsApp</a>
+        <span>São Paulo — SP</span>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="current-year">2026</span> Bapptech. Todos os direitos reservados.</span>
+      <a href="#topo">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <noscript><div class="noscript">O JavaScript está desativado. O conteúdo permanece acessível, mas o formulário de WhatsApp e o menu móvel precisam de JavaScript.</div></noscript>
+  <script src="./script.js" defer></script>
+</body>
 </html>
